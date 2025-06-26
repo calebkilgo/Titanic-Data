@@ -86,14 +86,14 @@ print('Shape of Array: ', shape)
 print('')
 print('Average Age: ', avg_age)
 print('')
-print('Oldest Passenger\'s ID: ', oldest_passenger_id, 'Oldest Passenger\'s Age: ', oldest_age)
+print('Oldest Passenger\'s ID: ', oldest_passenger_id, '\nOldest Passenger\'s Age: ', oldest_age)
 print('')
-print('Youngest Passenger\'s ID: ', youngest_passenger_id, 'Youngest Passenger\'s Age: ', youngest_age)
+print('Youngest Passenger\'s ID: ', youngest_passenger_id, '\nYoungest Passenger\'s Age: ', youngest_age)
 print('')
-print('Ship\'s Survival Rate: ', survival_rate)
+print('Ship\'s Survival Rate: ', survival_rate, '%', sep='')
 print('')
 
-# Calculating the survival rate for each passenger class.
+# Calculating and Printing the survival rate for each passenger class.
 for cls in [1, 2, 3]:
     in_class = passenger_class == cls
 
@@ -102,6 +102,8 @@ for cls in [1, 2, 3]:
 
     if total_in_class > 0:
         survival_rate_in_class = survivors_in_class / total_in_class * 100
-        print(f"Survival rate in class {cls}: {survival_rate_in_class:.2f}%")
+        print(f"Survival Rate in Class {cls}: {survival_rate_in_class:.2f}%")
+        print('')
     else:
-        print(f"No passengers in class {cls}.")
+        print(f"No Passengers in Class {cls}.")
+        print('')
